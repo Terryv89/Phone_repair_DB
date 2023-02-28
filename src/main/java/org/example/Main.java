@@ -82,9 +82,10 @@ public class Main {
             }else {
                 System.out.println("Failed to add customer");
             }
+
         } else if (customerOption.equals("3")) {
-            System.out.println("Update your customer-info.");
-            System.out.println("Enter your new customer_id: ");
+            System.out.println("Update customer-info.");
+            System.out.println("Enter the id of the customer you wanna update: ");
             int customerId = scanner.nextInt();
             System.out.println("Enter your new first name: ");
             String firstName = scanner.next();
@@ -93,13 +94,26 @@ public class Main {
             System.out.println("Enter your new phone number: ");
             int phoneNumber = scanner.nextInt();
 
-            Customer customer = new Customer(customerId, firstName,lastName,phoneNumber);
+            Customer customer = new Customer(customerId,firstName,lastName,phoneNumber);
             boolean isCustomerUpdated = CustomersDB.updateCustomer(customer);
 
             if (isCustomerUpdated){
                 System.out.println("Customer updated successfully");
             }else {
                 System.out.println("Failed to update customer");
+            }
+
+        } else if (customerOption.equals("4")) {
+            System.out.println("Delete a customer");
+            System.out.println("Enter the customer id you wanna delete: ");
+            int customerId = scanner.nextInt();
+
+            boolean isCustomerDeleted = CustomersDB.deleteCustomer(customerId);
+
+            if (isCustomerDeleted){
+                System.out.println("You successfully deleted the customer");
+            }else {
+                System.out.println("Failed to delete the customer");
             }
 
         }
