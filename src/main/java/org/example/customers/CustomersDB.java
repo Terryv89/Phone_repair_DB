@@ -15,7 +15,6 @@ public class CustomersDB extends DBmanager {
         List<Customer> customers = new ArrayList<>();
 
         try {
-
             String query = " SELECT * FROM customers;";
             Statement statement = conn.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
@@ -30,7 +29,6 @@ public class CustomersDB extends DBmanager {
                         last_name,phone_number);
 
                 customers.add(customer);
-
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -38,7 +36,7 @@ public class CustomersDB extends DBmanager {
         return customers;
     }
 
-    public boolean addCustomer(Customer customer) {
+    public static boolean addCustomer(Customer customer) {
         boolean isCustomerAdded = false;
 
         try {
@@ -59,7 +57,7 @@ public class CustomersDB extends DBmanager {
         return isCustomerAdded;
     }
 
-    public boolean updateCustomer(Customer customer) {
+    public static boolean  updateCustomer(Customer customer) {
         boolean isCustomerUpdated = false;
 
         try {
@@ -78,11 +76,10 @@ public class CustomersDB extends DBmanager {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return isCustomerUpdated;
     }
 
-    public boolean deleteCustomer(int customerId) {
+    public static boolean deleteCustomer(int customerId) {
         boolean isCustomerDeleted = false;
 
         try {
@@ -97,11 +94,7 @@ public class CustomersDB extends DBmanager {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return isCustomerDeleted;
     }
-
-
-
 
 }

@@ -7,9 +7,15 @@ public class Customer {
     public String last_name;
     public int phone_number;
 
-    public Customer(int customer_id, String first_name,
-                    String last_name, int phone_number) {
+    public Customer(int customer_id, String first_name, String last_name, int phone_number) {
         this.customer_id = customer_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.phone_number = phone_number;
+    }
+
+    public Customer(String first_name,
+                    String last_name, int phone_number) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.phone_number = phone_number;
