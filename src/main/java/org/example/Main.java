@@ -65,6 +65,7 @@ public class Main {
 
         if(customerOption.equals("1")){
             System.out.println(GetCustomers());
+
         } else if (customerOption.equals("2")){
             System.out.println("Enter new customer details: ");
             System.out.println("First name: ");
@@ -115,7 +116,6 @@ public class Main {
             }else {
                 System.out.println("Failed to delete the customer");
             }
-
         }
     }
     private static void selectCustomer(){

@@ -63,4 +63,9 @@ public class Customer {
     public void setPhone_number(int phone_number) {
         this.phone_number = phone_number;
     }
+
+
+
+
+
 }
