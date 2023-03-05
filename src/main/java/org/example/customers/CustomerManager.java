@@ -1,13 +1,8 @@
 package org.example.customers;
 
-import java.util.Scanner;
-
 import static org.example.Main.scanner;
 
 public class CustomerManager {
-
-
-
     public static void addCustomer() {
         System.out.println("Enter new customer details: ");
         System.out.println("First name: ");

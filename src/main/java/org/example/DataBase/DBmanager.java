@@ -10,7 +10,7 @@ public abstract class DBmanager {
     private static final String DB_USERNAME = "root";
     //private static final String DB_USERNAME = "admin"; för aws
     private static final String DB_PASSWORD = "root";
-    //private static final String DB_PASSWORD = "Terry!123"; för aws
+    //private static final String DB_PASSWORD = ""; för aws
     protected static Connection conn;
 
     public boolean isConnected = false;
