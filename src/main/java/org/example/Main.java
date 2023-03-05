@@ -30,7 +30,7 @@ public class Main {
             System.out.println("Welcome to the phone repair app");
             System.out.println("Press 1 to input who you are: ");
             System.out.println("Press 0 to exit");
-            String optionOne = scanner.nextLine();
+            String optionOne = String.valueOf(scanner.nextInt());
 
             if (optionOne.equals("1")){
                 selectCustomer();
@@ -152,17 +152,13 @@ public class Main {
 
         }else if (paymentOption.equals("2")) {
             System.out.println("Enter new payment details: ");
-            System.out.println("amount_due: ");
+            System.out.println("The amount to pay: ");
             int amount_due = scanner.nextInt();
-            System.out.println("payment_method: ");
+            System.out.println("What payment method do you wanna use?: ");
             String payment_method = scanner.next();
-            System.out.println("payment_date: ");
+            System.out.println("When do you wanna pay?: ");
             String payment_date = scanner.next();
-            System.out.println("Here comes the repairs, if u was unsure about the repair id");
-            System.out.println(GetRepairs());
-            System.out.println("and here is the customers");
-            System.out.println(GetCustomers());
-            System.out.println("repair_id: ");
+            System.out.println("Enter the repair id of the payment: ");
             int repair_id = scanner.nextInt();
 
             Payments payments = new Payments(amount_due, payment_method, payment_date, repair_id);
@@ -225,13 +221,13 @@ public class Main {
         System.out.println("3. to update a repair");
         System.out.println("4. to delete a repair");
         System.out.println("or 5 to exit");
-        String customerOption = String.valueOf(scanner.nextInt());
+        String repairOption = String.valueOf(scanner.nextInt());
 
-        if (customerOption.equals("1")){
+        if (repairOption.equals("1")){
             System.out.println(GetRepairs());
 
 
-        }else if (customerOption.equals("2")) {
+        }else if (repairOption.equals("2")) {
             System.out.println("Enter new repairs details: ");
             System.out.println("repair cost: ");
             int repair_cost = scanner.nextInt();
@@ -253,7 +249,7 @@ public class Main {
                 System.out.println("Failed to add The new Repair");
             }
 
-        }else if (customerOption.equals("3")){
+        }else if (repairOption.equals("3")){
             System.out.println("Update Repair-info.");
             System.out.println("Enter the id of the Repair you wanna update: ");
             int repairId = scanner.nextInt();
@@ -278,7 +274,7 @@ public class Main {
             }
 
 
-        }else if (customerOption.equals("4")){
+        }else if (repairOption.equals("4")){
             System.out.println("Delete a repair");
             System.out.println("Enter the repair id you wanna delete: ");
             int repairId = scanner.nextInt();

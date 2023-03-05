@@ -43,7 +43,7 @@ public class PaymentDB extends DBmanager {
         boolean isPaymentAdded = false;
 
         try {
-            String query = "INSERT INTO payments (amount_due, payment_method,payment_date," +
+            String query = "INSERT INTO payments (amount_due, payment_method, payment_date," +
                     " repair_id) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, payments.getAmount_due());
