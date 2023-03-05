@@ -19,8 +19,6 @@ public class Main {
     private static Customer selectedUser = null;
     public static final Scanner scanner = new Scanner(System.in);
 
-    //String selectedUsername = selectedUser == null ? "NONE" : selectedUser.first_name;
-
     public static void main(String[] args) {
 
         while(true){
