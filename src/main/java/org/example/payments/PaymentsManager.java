@@ -6,7 +6,7 @@ public class PaymentsManager {
 
     public static String welcomeMenuPayments() {
         System.out.println("welcome to the payments menu");
-        System.out.println("1. to look at our payments");
+        System.out.println("1. to look at our unpaid payments");
         System.out.println("2. to add a payments");
         System.out.println("3. to update a payments");
         System.out.println("4. to delete a payments");
