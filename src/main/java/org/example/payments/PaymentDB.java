@@ -1,7 +1,6 @@
 package org.example.payments;
 
 import org.example.DataBase.DBmanager;
-import org.example.customers.Customer;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
